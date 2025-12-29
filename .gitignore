@@ -29,3 +29,6 @@ server/tokens.json
 tokens.json
 server/node_modules
 .env
+
+.vercel
+.env*.local
