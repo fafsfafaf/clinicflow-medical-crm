@@ -20,11 +20,11 @@ const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     '--padding-window': `${theme.padding}px`,
     '--shadow-strength': `0 20px 40px -12px rgba(0,0,0, ${theme.shadowStrength / 100})`,
     '--sidebar-width': `${theme.sidebarWidth}px`,
-    
+
     // Drawer styles
     '--drawer-radius': `${theme.drawerRadius}px`,
     '--drawer-width': `${theme.drawerWidth}px`,
-    
+
     // Typography Variables
     '--font-global': theme.fontGlobal,
     '--font-metrics': theme.fontMetrics,
@@ -32,7 +32,7 @@ const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   } as React.CSSProperties;
 
   return (
-    <div 
+    <div
       className="h-screen w-screen bg-[var(--bg-app)] text-slate-900 font-sans transition-colors duration-300 overflow-hidden flex"
       style={shellStyles}
     >
@@ -41,9 +41,9 @@ const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
       {/* Main Content Area - Contains the Floating Window */}
       <div className="flex-1 h-full py-[var(--padding-window)] pr-[var(--padding-window)] pl-0 overflow-hidden">
-        
+
         {/* The Floating Window */}
-        <div 
+        <div
           className="w-full h-full bg-[var(--bg-window)] flex flex-col overflow-hidden relative transition-all duration-300"
           style={{
             borderRadius: 'var(--radius-window)',
@@ -57,13 +57,22 @@ const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           {/* Page Content */}
           <main className="flex-1 overflow-y-auto overflow-x-hidden p-6 relative">
             {children}
+
+            <footer className="mt-auto pt-10 pb-6 text-center text-xs text-slate-400">
+              <p>&copy; {new Date().getFullYear()} ClinicDashboard. All rights reserved.</p>
+              <div className="flex justify-center gap-4 mt-2">
+                <a href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                <span className="text-slate-300">•</span>
+                <a href="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</a>
+              </div>
+            </footer>
           </main>
         </div>
       </div>
 
       {/* Live UI Controller */}
       <UIController />
-      
+
       {/* Global Widgets */}
       <GlobalCallWidget />
     </div>
