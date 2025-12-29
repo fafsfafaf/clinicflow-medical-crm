@@ -26,7 +26,7 @@ const Sidebar = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
-        <span className="font-bold text-slate-800 text-lg">ClinicFlow</span>
+        <span className="font-bold text-slate-800 text-lg">ClinicDashboard</span>
       </div>
 
       {/* Org Switcher */}
@@ -48,8 +48,8 @@ const Sidebar = () => {
             to={item.path}
             className={({ isActive }) => cn(
               "flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-all",
-              isActive 
-                ? "bg-white text-primary shadow-sm border border-slate-100" 
+              isActive
+                ? "bg-white text-primary shadow-sm border border-slate-100"
                 : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
             )}
           >

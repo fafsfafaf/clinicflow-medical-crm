@@ -16,12 +16,12 @@ const TermsPage = () => {
 
                 <h3>1. Acceptance of Terms</h3>
                 <p>
-                    By accessing and using ClinicFlow ("the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Service.
+                    By accessing and using ClinicDashboard ("the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Service.
                 </p>
 
                 <h3>2. Description of Service</h3>
                 <p>
-                    ClinicFlow provides a medical CRM dashboard that integrates with third-party services, including Google Calendar, to help manage patient appointments and clinic workflows.
+                    ClinicDashboard provides a medical CRM dashboard that integrates with third-party services, including Google Calendar, to help manage patient appointments and clinic workflows.
                 </p>
 
                 <h3>3. Google Calendar Integration</h3>
